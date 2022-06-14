@@ -13,11 +13,15 @@ for(var i = 0; i < enemyNames.length; i++) {
   console.log(enemyNames[i]);
   console.log(i);
   console.log(enemyNames[i] + " is at " + i + " index");
+}
 
 var fight = function(enemyName) {
-  //fight function statements
+  // repeat and execute as long as the enemy-robot is alive
+  while(enemyHealth > 0) {
+  // TODO: I NEED TO PUT FIGHT FUNCTION IN THIS SPACE!!!
+  // place fight function code block here ...
+  }
 }
-  window.alert("Welcome to Robot Gladiators!");
 var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle?  Enter 'FIGHT' or 'SKIP' to choose");
 
   // if player choses to fight, then fight
@@ -46,12 +50,11 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
     window.alert(playerName + " has died!");
   } else {
     window.alert(playerName + " still has " + playerHealth + " health left.");
-  }
   // if player choses to skip
+  } 
 } else if (promptFight === "skip" || promptFight === "SKIP") {
   //confirm player wants to skip
   var confirmSkip = window.confirm("Are you sure you'd like to quit?");
-  
   // if yes (true), leave fight
   if (confirmSkip) {
     window.alert(playerName + " has decided to skip this fight. Goodbye!");
@@ -98,4 +101,9 @@ else {
 }
 
 for(var i = 0; i < enemyNames.length; i++) {
-  fight(enemyNames[i]);}
+  debugger;
+  // call fight function with enemy-robot
+  fight(enemyNames[i]);
+}
+
+
